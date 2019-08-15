@@ -33,9 +33,9 @@ function createMaybe (value) {
 
   self.match = function match (just, nothing) {
     if (value === null || typeof value === 'undefined') {
-      return nothing(value)
+      return nothing()
     } else {
-      return just()
+      return just(value)
     }
   }
 
