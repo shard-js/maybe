@@ -12,7 +12,8 @@ module.exports = () => ({
   output: {
     path: dist(),
     filename: 'maybe.js',
-    library: 'maybe'
+    library: 'maybe',
+    libraryTarget: 'umd'
   },
   module: {
     rules: [
