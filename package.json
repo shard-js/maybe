@@ -1,8 +1,8 @@
 {
   "name": "@shards/maybe",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A \"Maybe\" runtime module for javascript",
-  "main": "dist/maybe.js",
+  "main": "dist/maybe.web.js",
   "scripts": {
     "test": "jest --coverage",
     "build": "webpack",
@@ -29,6 +29,7 @@
     "@babel/preset-env": "^7.5.5",
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
     "jest": "^24.8.0",
     "standard": "^13.1.0",
     "webpack": "^4.39.2",
