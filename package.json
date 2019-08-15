@@ -1,0 +1,36 @@
+{
+  "name": "maybe",
+  "version": "1.0.0",
+  "description": "A \"Maybe\" runtime module for javascript",
+  "main": "dist/maybe.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Parasrah/maybe.git"
+  },
+  "keywords": [
+    "maybe",
+    "javascript",
+    "runtime",
+    "shard"
+  ],
+  "author": "Parasrah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Parasrah/maybe/issues"
+  },
+  "homepage": "https://github.com/Parasrah/maybe#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.6",
+    "jest": "^24.8.0",
+    "standard": "^13.1.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.6"
+  }
+}
