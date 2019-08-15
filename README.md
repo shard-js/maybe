@@ -20,13 +20,19 @@ yarn add @shards/maybe
 to require:
 
 ```
-const Maybe = require('@shards/maybe')
+const Maybe = require('@shards/maybe').default
 ```
 
 to import (es6 modules):
 
 ```
 import Maybe from '@shards/maybe'
+```
+
+for node:
+
+```
+import Maybe from '@shards/maybe/dist/maybe.node.js'
 ```
 
 ## usage
