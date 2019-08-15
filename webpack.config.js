@@ -15,7 +15,7 @@ function createConfig (target) {
     output: {
       path: dist(),
       filename: `maybe.${target}.js`,
-      library: 'maybe'
+      library: 'maybe',
       libraryTarget: 'umd'
     },
     module: {
