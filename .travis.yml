@@ -2,27 +2,31 @@ stages:
 - name: test
   if: branch != master AND type = push AND tag is blank
 - name: npm
-  if: branch = master AND type = push AND tag is present
+  if: branch = master AND type = push AND tag is blank
 - name: github
   if: branch = master AND type = push AND tag is blank
+
 jobs:
   include:
   - stage: test
     language: node_js
     node_js:
-    - lts/*
+      - lts/*
     dist: xenial
-    install: npm i
+    install:
+      - npm i
     script:
-    - npm run build
-    - npm test
+      - npm run build
+      - npm test
   - stage: npm
     language: node_js
     node_js:
-    - lts/*
+      - lts/*
     dist: xenial
-    install: npm i
-    script: npm run build
+    install:
+      - npm i
+    script:
+      - npm run build
     deploy:
       provider: npm
       email: npm@parasrah.com
@@ -32,13 +36,13 @@ jobs:
   - stage: github
     language: node_js
     node_js:
-    - lts/*
+      - lts/*
     dist: xenial
     install: npm i
     script: npm run build
     before_deploy:
-    - export TRAVIS_TAG=$(npm run version | tail -n1)
-    - git tag $TRAVIS_TAG
+      - export TRAVIS_TAG=$(npm run version | tail -n1)
+      - git tag $TRAVIS_TAG
     deploy:
       provider: releases
       file_glob: true
