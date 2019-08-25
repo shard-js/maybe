@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Parasrah/maybe.git"
+    "url": "git+https://github.com/shard-js/maybe.git"
   },
   "keywords": [
     "maybe",
